@@ -160,6 +160,7 @@ function getRandomInt(min, max) {
 let pokemon = getRandomInt(1, 150);
 
 var sourceImg = document.createElement("img");
+sourceImg.crossOrigin = "Anonymous";
 sourceImg.src = `assets/img/${pokemon}.png`;
 myTimeout = setTimeout(aca, 100);
 
@@ -168,6 +169,7 @@ async function aca() {
   var canvas = document.createElement("canvas");
 
   var silhouetteImg = document.getElementById("silhouetteImg");
+  silhouetteImg.crossOrigin = "Anonymous";
   var ctx = canvas.getContext("2d");
   canvas.width = sourceImg.width;
   canvas.height = sourceImg.height;
